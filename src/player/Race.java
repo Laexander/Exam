@@ -1,4 +1,4 @@
-package Player;
+package player;
 
 /* The enumerate Race represents the Race of a player.
  * There are 16 different races in the game.

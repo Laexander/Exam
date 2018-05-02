@@ -1,21 +1,21 @@
-package Units;
+package units;
 
-import Player.Player;
+import player.Player;
 
-/* Carrier is a unit in Twilight Imperium.
- * A Carrier has a combat value, a resource cost, movement speed, a capacity and a owner.
+/* Cruiser is a unit in Twilight Imperium.
+ * A Cruiser has a combat value, a resource cost, movement speed, a capacity and a owner.
  * combatValue, resourceCost, movementSpeed and capacity could be made local variables or a single value int their
  * getters, as they are a static value, however this would reduce readability, as it would not be obvious what
- * information Carrier contains at a glance. */
-public class Carrier implements Unit
+ * information Cruiser contains at a glance. */
+public class Cruiser implements Unit
 {
-    private int combatValue = 9;
-    private int resourceCost = 3;
-    private int movementSpeed = 1;
-    private int capacity = 6;
+    private int combatValue = 7;
+    private int resourceCost = 2;
+    private int movementSpeed = 2;
+    private int capacity = 0;
     Player owner;
 
-    public Carrier(Player owner) {
+    public Cruiser(Player owner) {
         this.owner = owner;
     }
 

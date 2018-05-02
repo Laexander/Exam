@@ -1,7 +1,7 @@
-import Player.*;
+import player.*;
 
-import static Player.PlayerColor.*;
-import static Player.Race.*;
+import static player.PlayerColor.*;
+import static player.Race.*;
 
 
 public class Main

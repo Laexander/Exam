@@ -1,6 +1,6 @@
-package Units;
+package units;
 
-import Player.Player;
+import player.Player;
 
 /* Destroyer is a unit in Twilight Imperium.
  * A Destroyer has a combat value, a resource cost, movement speed, a capacity and a owner.

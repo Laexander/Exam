@@ -1,4 +1,4 @@
-package Player;
+package player;
 
 import java.util.Objects;
 
@@ -38,6 +38,7 @@ public class Player
         return color;
     }
 
+    /* */
     @Override
     public boolean equals(Object o)
     {

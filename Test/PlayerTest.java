@@ -1,11 +1,11 @@
-import Player.Player;
+import player.Player;
 import org.junit.jupiter.api.Test;
 
-import static Player.PlayerColor.Black;
-import static Player.Race.Barony_of_Letnev;
+import static player.PlayerColor.Black;
+import static player.Race.Barony_of_Letnev;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static Player.PlayerColor.Green;
-import static Player.Race.Clan_of_Saar;
+import static player.PlayerColor.Green;
+import static player.Race.Clan_of_Saar;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class PlayerTest
