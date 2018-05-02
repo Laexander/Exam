@@ -6,9 +6,18 @@ import player.Player;
  * Unit contains getter for all relevant information of the units in Twilight Imperium. */
 public interface Unit
 {
+    //Returns combat value
     int getCombatValue();
+
+    //Returns resource cost
     int getResourceCost();
+
+    //Returns movement speed
     int getMovementSpeed();
+
+    //Returns capacity
     int getCapacity();
+
+    //returns owner
     Player getOwner();
 }

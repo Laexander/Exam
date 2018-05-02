@@ -6,13 +6,14 @@ import java.util.Objects;
  * A Player has a name, a race and a player color. */
 public class Player
 {
-    // Player name
+    //Player name
     private String name;
     //Player race
     private Race playerRace;
     //Player color
     private PlayerColor color;
 
+    //Constructor for Player
     public Player(String name, Race player_race, PlayerColor color)
     {
         this.name = name;
@@ -26,22 +27,24 @@ public class Player
         return name;
     }
 
-    //returns playerRace
+    //Returns playerRace
     public Race getPlayerRace()
     {
         return playerRace;
     }
 
-    // Returns color
+    //Returns color
     public PlayerColor getColor()
     {
         return color;
     }
 
-    /* */
+    /* Method used to determine equality.
+     * Players are equals if name, race and color are the same */
     @Override
     public boolean equals(Object o)
     {
+        //TODO Figure out if color is the only important determiner in equality
         if (this == o) return true;
         if (!(o instanceof Player)) return false;
         Player player = (Player) o;
@@ -50,10 +53,12 @@ public class Player
                 getColor() == player.getColor();
     }
 
+    /* Method returns a hashcode value for Player
+     * Hashcode uses name, race and color */
     @Override
     public int hashCode()
     {
-
+        //TODO Figure out if color is the only important determiner in equality
         return Objects.hash(getName(), getPlayerRace(), getColor());
     }
 

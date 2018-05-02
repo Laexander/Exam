@@ -8,6 +8,7 @@ import static player.PlayerColor.Green;
 import static player.Race.Clan_of_Saar;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/* Tests for the class Player */
 public class PlayerTest
 {
     /* Tests that Players with the same name, race and color are equals */
