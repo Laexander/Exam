@@ -1,0 +1,8 @@
+Player 1 (EMIRATES_OF_HACAN)  RED
+	Corpal 1
+	Corpal 2
+	Corpal 3
+
+Player 2 (GHOSTS_OF_CREUSS)  BLUE
+	Terminus 1
+

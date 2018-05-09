@@ -2,49 +2,50 @@ package player;
 
 import java.util.Objects;
 
+//Name: Alexander Pugholm Jankowski,
+//Mail: ajanko17@student.aau.dk
+
 /* The Player class is a representation of a player in the game Twilight Imperium.
  * A Player has a name, a race and a player color. */
-public class Player
-{
-    //Player name
+public class Player {
+    //Player's name
     private String name;
-    //Player race
+    //Player's race
     private Race playerRace;
-    //Player color
+    //Player's color
     private PlayerColor color;
 
-    //Constructor for Player
-    public Player(String name, Race player_race, PlayerColor color)
-    {
+    /* Constructor for Player
+     * Parameter name: The name of Player
+     * Parameter playerRace: The race of Player
+     * Parameter color: The color of Player*/
+    public Player(String name, Race playerRace, PlayerColor color) {
         this.name = name;
-        this.playerRace = player_race;
+        this.playerRace = playerRace;
         this.color = color;
     }
 
     //Returns name
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
     //Returns playerRace
-    public Race getPlayerRace()
-    {
+    public Race getPlayerRace() {
         return playerRace;
     }
 
     //Returns color
-    public PlayerColor getColor()
-    {
+    public PlayerColor getColor() {
         return color;
     }
 
-    /* Method used to determine equality.
-     * Players are equals if name, race and color are the same */
+    /* Method used to determine equality of players.
+     * Players are equals if name, race and color are the same
+     * Parameter o: Other object to be compared to this object
+     * Return: True if equals, false if not. */
     @Override
-    public boolean equals(Object o)
-    {
-        //TODO Figure out if color is the only important determiner in equality
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Player)) return false;
         Player player = (Player) o;
@@ -53,23 +54,20 @@ public class Player
                 getColor() == player.getColor();
     }
 
-    /* Method returns a hashcode value for Player
-     * Hashcode uses name, race and color */
+    /* Method used to generate hashcode value for Player
+     * Hashcode uses name, race and color
+     * Return: hashcode of object*/
     @Override
-    public int hashCode()
-    {
-        //TODO Figure out if color is the only important determiner in equality
+    public int hashCode() {
         return Objects.hash(getName(), getPlayerRace(), getColor());
     }
 
-    /* toString returns a string with the class and its fields */
+    /* Method used to return a string representation of the class and its fields
+     * Return: String representation of Player */
     @Override
-    public String toString()
-    {
-        return "Player{" +
-                "name='" + name + '\'' +
-                ", playerRace=" + playerRace +
-                ", color=" + color +
-                '}';
+    public String toString() {
+        return name + " " +
+                "(" + playerRace + ")  " +
+                color;
     }
 }

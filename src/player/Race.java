@@ -1,13 +1,48 @@
 package player;
 
-/* The enumerate Race represents the Race of a player.
+import myExceptions.InvalidIndexException;
+
+import java.util.HashMap;
+import java.util.Map;
+
+//Name: Alexander Pugholm Jankowski,
+//Mail: ajanko17@student.aau.dk
+
+/* The enumeration Race represents the Race of a player.
  * There are 16 different races in the game.
- * The races have been implemented as an enumerate to make comparisons in player races quicker, and as the 16 races are
- * predefined there is no reason to use string.
+ * As the 16 races are predefined, they are represented as an enumeration.
  * I have chosen to use underscore when separating words in the race names to increase readability. */
-public enum Race
-{
-    Barony_of_Letnev, Clan_of_Saar, Emirates_of_Hacan, Federation_of_Sol, Mentak_Coalition, Naalu_Collective,
-    Nekro_Virus, Sardakk_Norr, Universities_of_JolNar, Winnu, Xxcha_Kingdom, Yssaril_Tribes, Brotherhood_of_Yin,
-    Embers_of_Muaat, Ghosts_of_Creuss, L1z1x_Mindnet
+public enum Race {
+    BARONY_OF_LETNEV(0), CLAN_OF_SAAR(1), EMIRATES_OF_HACAN(2), FEDERATION_OF_SOL(3), MENTAK_COALITION(4),
+    NAALU_COLLECTIVE(5), NEKRO_VIRUS(6), SARDAKK_NORR(7), UNIVERSITIES_OF_JOL_NAR(8), XXCHA_KINGDOM(9),
+    YSSARIL_TRIBES(10), BROTHERHOOD_OF_YIN(11), EMBERS_OF_MUAAT(12), GHOSTS_OF_CREUSS(13), L1Z1X_MINDNET(14), WINNU(15);
+
+    //Variable to store index for each race.
+    private int index;
+
+    //A map to associate an int to a race
+    private static Map<Integer, Race> raceMap = new HashMap<>();
+
+    //Associates index to a race
+    static {
+        for (Race raceEnum : Race.values()) {
+            raceMap.put(raceEnum.index, raceEnum);
+        }
+    }
+
+    //Constructor for Race
+    Race(int index) {
+        this.index = index;
+    }
+
+    /* Returns the Race corresponding to the given index
+     * Parameter index: an integer between 0 and 15 used to determine Race to return
+     * Throws: invalidIndexException if in index is too high or too low */
+    public static Race getRace(int index) throws InvalidIndexException {
+        if (index >= 0 && index < 16) {
+            return raceMap.get(index);
+        } else {
+            throw new InvalidIndexException("Invalid index for Race, index must be between 0 and 15");
+        }
+    }
 }
